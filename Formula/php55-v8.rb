@@ -20,8 +20,8 @@ class V8 < Formula
   # not building on Snow Leopard:
   # https://github.com/Homebrew/homebrew/issues/21426
   depends_on :macos => :high_sierra
-
-  depends_on :python@2 => :build # gyp doesn't run under 2.6 or lower
+  
+  depends_on "python@2" => :build # gyp doesn't run under 2.6 or lower
   depends_on "readline" => :optional
 
   needs :cxx11
