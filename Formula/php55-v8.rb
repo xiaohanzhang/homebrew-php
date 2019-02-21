@@ -24,8 +24,6 @@ class V8 < Formula
   depends_on "python@2" => :build # gyp doesn't run under 2.6 or lower
   depends_on "readline" => :optional
 
-  needs :cxx11
-
   # Update from "DEPS" file in tarball.
   # Note that we don't require the "test" DEPS because we don't run the tests.
   resource "gyp" do
@@ -69,8 +67,6 @@ class V8 < Formula
   end
 
   def install
-    # Bully GYP into correctly linking with c++11
-    ENV.cxx11
     ENV["GYP_DEFINES"] = "clang=1 mac_deployment_target=#{MacOS.version}"
     # https://code.google.com/p/v8/issues/detail?id=4511#c3
     ENV.append "GYP_DEFINES", "v8_use_external_startup_data=0"
