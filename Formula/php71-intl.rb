@@ -17,10 +17,10 @@ class Php71Intl < AbstractPhp71Extension
 
   depends_on "icu4c"
 
-  needs :cxx11
+  # needs :cxx11
 
   def install
-    ENV.cxx11
+    # ENV.cxx11
     Dir.chdir "ext/intl"
 
     safe_phpize
