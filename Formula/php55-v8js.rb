@@ -14,7 +14,7 @@ class Php55V8js < AbstractPhp55Extension
     sha256 "78f75f1bcc7008ef169e727ea95049afd4cf841f67c08cd5f496b9bed2c95691" => :yosemite
   end
 
-  depends_on "v8"
+  depends_on "v8@3.15"
 
   def install
     Dir.chdir "v8js-#{version}" unless build.head?
