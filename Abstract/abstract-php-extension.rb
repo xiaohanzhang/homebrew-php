@@ -209,7 +209,7 @@ class AbstractPhp56Extension < AbstractPhpExtension
 
   def self.init(opts = [])
     super()
-    depends_on "exolnet/homebrew-deprecated/phpAT56" => opts if build.with?("homebrew-php")
+    depends_on "exolnet/homebrew-deprecated/php@5.6" => opts if build.with?("homebrew-php")
   end
 end
 
