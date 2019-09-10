@@ -6,7 +6,7 @@ class PhpAT56 < Formula
   sha256 "1369a51eee3995d7fbd1c5342e5cc917760e276d561595b6052b21ace2656d1c"
 
   bottle do
-    root_url "https://dl.bintray.com/exolnet/bottles-deprecated"
+    root_url "https://github.com/xiaohanzhang/homebrew-php/raw/master/bottles"
     rebuild 2
     sha256 "73b687b813a0984e201b53c5f3f579365f6d0d0e434c9acbeb08eae6d2328c06" => :mojave
   end
